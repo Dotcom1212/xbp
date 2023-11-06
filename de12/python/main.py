@@ -1,24 +1,36 @@
-age=18+10
-age=20-age
-age=age*2
-age=age/3
+kanji_to_yomi = {
+    "剛力": "ごうりき",
+    "大王": "だいおう",
+    "凸守": "でこもり",
+    "神来社": "からいと",
+    "大豆生田": "おおまめうだ",
+    "九": "いちじく",
+    "月見里": "やまなし",
+    "勘解由小路": "かでのこうじ",
+    "怒鳴門": "どなるど",
+    "五百旗頭": "いおべき",
+}
 
+question_index = 0
 
+kanji_list = list(kanji_to_yomi.keys())
 
-for i in range(3):
+while question_index < len(kanji_list):
+    kanji = kanji_list[question_index]
+    correct_yomi = kanji_to_yomi[kanji]
+    
+    # 枠線を含むプロンプトメッセージを表示
+    user_input = input(f"この人あったことある...苗字は確か...[{kanji}] ")
 
-        #文字だからダブルクオーテーションを入れる
-    print(i,"人目")
-    name=input("あなたの名前を入れてください")
-    waist=float(input("あなたの腹囲の数値を教えてください"))
-    age=int(input("あなたの年齢を教えてください"))
-
-    print(name, "さんは腹囲", waist, "cmで年齢は",age, "才ですね。")
-
-    #ここからが条件分岐
-    if waist>=85 and age>=40:#この部分が変更されました
-        print(name,"さん、内臓脂肪蓄積注意です")
+    if user_input == correct_yomi:
+        print("あ、危ねぇ！覚えてた...。よかった...。")
     else:
-        print(name,"さんの腹囲は問題ありません。けどもっと食え！")
+        print(f"違った.....。気まずい....。もしかして「{correct_yomi}」だった気がする。")
+
+    question_index += 1
+
+print("苗字難しすぎだろ！！！")
+
+
 
 
