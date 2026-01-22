@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="神奈川大学 X-Business Program | Doyolabページ">
+  <meta name="keywords" content="XBP, Doyolab, 神奈川大学">
+  <title>Doyolab project</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" media="screen">
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div id="header">
+  <div class="inner">
+    <div class="logo">
+      <a href="./index.html">X-Business Program<br><span>ルイス輝南</span></a>
+      <h1>神奈川大学 国際経営学部</h1>
+    </div>
+  </div>
+</div>
+
+<!-- メインコンテンツ -->
+<div id="wrapper">
+  <section class="content">
+    <h3 class="heading">演習ノート</h3>
+
+    <article class="report">
+      <h2>第7回レポート：イベント投稿機能の設計</h2><br>
+
+      <h4>🔷 今回の目的</h4>
+      <p>
+        これまでのアンケート結果と自身の留学経験,施策のアプリ画面をを踏まえ、留学初期に発生しやすい「イベント情報の見落とし」を減らすために、
+        アプリ内で扱う投稿の中心をイベント情報に定め、投稿機能の設計方針と必要項目を整理した。
+        第6回までに作成したトップ画面・タイムラインUIを前提に、タイムラインへ流れる情報の質を担保する仕組みを考えることが目的である。
+      </p>
+
+      <h4>🔷 イベント投稿を中心にする理由</h4>
+      <ul>
+        <li>・留学初期は「何が、いつ、どこで告知されているか」が分からず、参加機会を逃しやすい</li>
+        <li>・掲示板、メール、SNSなど情報源が分散しており、能動的に探さないと届かない</li>
+        <li>・イベントは参加をきっかけに友人関係が生まれやすく、情報と人の両方に繋がる入口になる</li>
+      </ul>
+
+      <h4>🔷 投稿タイプの整理（最小構成）</h4>
+      <p>
+        MVPの段階では投稿タイプを増やしすぎず、目的に直結する2種類に絞る。
+      </p>
+      <ul>
+        <li><strong>① イベント投稿（メイン）</strong>：学内外のイベント、交流会、説明会、留学生向け企画など</li>
+        <li><strong>② 生活Tips投稿（サブ）</strong>：イベント参加に関係する補助情報（行き方、服装、持ち物、注意点など）</li>
+      </ul>
+
+      <h4>🔷 イベント投稿の入力項目（設計）</h4>
+      <p>イベント情報の再利用性・検索性を高めるため、最低限の構造化項目を設定する。</p>
+      <ul>
+        <li>・イベント名（Title）</li>
+        <li>・日時（Date/Time）</li>
+        <li>・場所（Location：キャンパス/建物/地域など）</li>
+        <li>・対象（Audience：留学生歓迎、学部限定など）</li>
+        <li>・概要（Description：200字程度の短文）</li>
+        <li>・投稿者属性（学生/団体 など）</li>
+        <li>・タグ（例：#exchange #party #career）</li>
+        <li>・参考リンク（任意：公式ページや申込ページ）</li>
+      </ul>
+
+      <h4>🔷 タイムライン設計の考え方</h4>
+      <p>
+        本サービスのタイムラインは「友達ベースのSNS」ではなく、<strong>学校・地域ベースで情報が流れるダッシュボード</strong>として設計する。
+        ユーザーは渡航先の学校や地域をフォローすることで、関連するイベント投稿を自然に受け取れる。
+        交流はチャットを主目的にせず、イベント参加を通じて結果として生まれる形を想定する。
+      </p>
+
+      <h4>🔷 Figma作業メモ（スクリーンショット枠）</h4>
+      <p>以下に、イベント投稿機能の導入を前提とした画面設計のスクリーンショット。</p>
+      <img src="./image timeline.png" alt="第7回 Figma画面（イベント投稿設計）" style="width:100%; max-width:350px;">
+
+      <h4>🔷 制約と今後の方針</h4>
+      <p>
+        今回は、継続的に多数のユーザーからフィードバックを回収することが難しいため、
+        第3回までのアンケート結果と自身の留学経験を根拠として仮説設計を行った。
+        次回は「イベント投稿が実際に使われるための条件」を整理し、投稿者（学生/団体）を想定した投稿フローと、
+        イベントの検索・保存（お気に入り）など周辺機能の優先順位を検討する。
+      </p>
+
+      <p style="margin-top: 10px;">
+        🔷最近までのオーストラリア留学中の様子Instagramに投稿しています。ぜひ気軽に覗いてみてください！<br>
+        Instagram: <a href="https://www.instagram.com/keen_vq37" target="_blank" style="color: #E1306C; font-weight: bold;">@keen_vq37</a>
+      </p>
+    </article>
+  </section>
+</div>
+
+<!-- フッター -->
+<div id="footer">
+  <div class="inner">
+    <section class="gridWrapper">
+      <article class="grid">
+        <p class="logo"><a href="./index.html">X-Business Program<br /><span>XBP科目3期生（2023）</span></a></p>
+      </article>
+
+      <article class="grid col3" style="background-color: #8B5A2B; padding: 10px 20px; border-radius: 4px;">
+        <ul style="margin: 0; padding: 0; list-style: none;">
+          <li>Email: r202302166vd@jindai.jp</li>
+          <li>所属学部: 神奈川大学 国際経営学部 3年F組</li>
+          <li>Instagram: <a href="https://www.instagram.com/keen_vq37" target="_blank">＠keen_vq37</a></li>
+          <li>学籍番号: 202302166</li>
+        </ul>
+        <p style="margin-top: 10px;">XBP紹介ページ：<a href="https://doyolab.net/xbp/intro/" target="_blank" rel="nofollow">https://doyolab.net/xbp/intro/</a></p>
+      </article>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>

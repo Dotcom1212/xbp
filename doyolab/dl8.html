@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="神奈川大学 X-Business Program | Doyolabページ">
+  <meta name="keywords" content="XBP, Doyolab, 神奈川大学">
+  <title>Doyolab project</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" media="screen">
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div id="header">
+  <div class="inner">
+    <div class="logo">
+      <a href="./index.html">X-Business Program<br><span>ルイス輝南</span></a>
+      <h1>神奈川大学 国際経営学部</h1>
+    </div>
+  </div>
+</div>
+
+<!-- メインコンテンツ -->
+<div id="wrapper">
+  <section class="content">
+    <h3 class="heading">演習ノート</h3>
+
+    <article class="report">
+      <h2>第8回レポート：イベント探索・保存機能の設計</h2><br>
+
+      <h4>🔷 今回の目的</h4>
+      <p>
+        第7回で設計した「イベント投稿機能」を実際に活用できるものにするため、
+        ユーザーがイベントを<strong>見つける・整理する・後で確認する</strong>までの流れを設計した。
+        特に今回は「学校」と「日付」を軸にした探索機能と、星マークを用いた保存機能に焦点を当てている。
+      </p>
+
+      <h4>🔷 イベント探索機能の設計</h4>
+      <p>
+        留学生は渡航先の学校や地域が明確であることが多いため、
+        フィルターは複雑にせず、以下の2軸に絞った。
+      </p>
+      <ul>
+        <li><strong>School：</strong> 所属・関心のある学校ごとにイベントを表示</li>
+        <li><strong>Date：</strong> Today / This week / This month の3区分</li>
+      </ul>
+      <p>
+        これにより、「今参加できるイベント」を直感的に把握できる構造を目指した。
+      </p>
+
+      <h4>🔷 保存（Saved）機能の設計</h4>
+      <p>
+        イベントカードには星マーク（☆）を設置し、気になったイベントをワンタップで保存できるようにした。
+        保存されたイベントは、画面下部ナビゲーションの「Saved（☆）」タブから一覧で確認できる想定とする。
+      </p>
+      <ul>
+        <li>・イベントカード右上に星マークを配置</li>
+        <li>・保存済みの場合は星が塗りつぶされる想定</li>
+        <li>・Saved画面では保存済みイベントのみを表示</li>
+      </ul>
+
+      <h4>🔷 「見つける」と「溜める」を分けた理由</h4>
+      <p>
+        タイムライン上で情報を流すだけでは、後から見返すことが難しくなりやすい。
+        そのため本サービスでは、「見つける（Home）」と「溜める（Saved）」を明確に分離した。
+        これにより、留学生がイベント参加を計画しやすくなることを狙っている。
+      </p>
+
+      <h4>🔷 UI作成メモ（スクリーンショット枠）</h4>
+      <p>
+        以下に、学校・日付フィルターおよび星マーク保存機能を反映したUI試作画面を掲載する。
+      </p>
+      <img src="./image favourit.png" alt="第8回 UI：イベント探索画面" style="width:100%; max-width:350px;">
+      
+
+      <h4>🔷 制約と今後の展開</h4>
+      <p>
+        今回は実装やユーザーテストまでは行わず、これまでのアンケート結果と自身の留学経験をもとにした仮説設計に留めている。
+        次回は、イベントが投稿されるまでの流れに着目し、「誰が・どのように投稿するのか」という投稿フローの設計を行う予定である。
+      </p>
+
+      <p style="margin-top: 10px;">
+        🔷最近までのオーストラリア留学中の様子Instagramに投稿しています。ぜひ気軽に覗いてみてください！<br>
+        Instagram: <a href="https://www.instagram.com/keen_vq37" target="_blank" style="color: #E1306C; font-weight: bold;">@keen_vq37</a>
+      </p>
+    </article>
+  </section>
+</div>
+
+<!-- フッター -->
+<div id="footer">
+  <div class="inner">
+    <section class="gridWrapper">
+      <article class="grid">
+        <p class="logo"><a href="./index.html">X-Business Program<br /><span>XBP科目3期生（2023）</span></a></p>
+      </article>
+
+      <article class="grid col3" style="background-color: #8B5A2B; padding: 10px 20px; border-radius: 4px;">
+        <ul style="margin: 0; padding: 0; list-style: none;">
+          <li>Email: r202302166vd@jindai.jp</li>
+          <li>所属学部: 神奈川大学 国際経営学部 3年F組</li>
+          <li>Instagram: <a href="https://www.instagram.com/keen_vq37" target="_blank">＠keen_vq37</a></li>
+          <li>学籍番号: 202302166</li>
+        </ul>
+        <p style="margin-top: 10px;">
+          XBP紹介ページ：
+          <a href="https://doyolab.net/xbp/intro/" target="_blank" rel="nofollow">
+            https://doyolab.net/xbp/intro/
+          </a>
+        </p>
+      </article>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
