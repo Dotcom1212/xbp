@@ -2,11 +2,9 @@
 <html dir="ltr" lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-  <meta name="description" content="神奈川大学 X-Business Program | Doyolabページ">
-  <meta name="keywords" content="XBP, Doyolab, 神奈川大学">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doyolab project</title>
-  <link rel="stylesheet" href="./style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -20,72 +18,76 @@
   </div>
 </div>
 
-<!-- メインコンテンツ -->
+<!-- メイン -->
 <div id="wrapper">
   <section class="content">
     <h3 class="heading">演習ノート</h3>
 
     <article class="report">
-      <h2>第13回レポート：イベント詳細ページの作成</h2><br>
+      <h2>第14回レポート：スクール一覧UIの設計と情報整理</h2>
+      <br>
 
       <h4>🔷 今回の目的</h4>
       <p>
-        第11回で作成したホーム画面を起点として、
-        イベント情報をより詳しく確認できる「イベント詳細ページ」を新たに作成した。
-        今回は、機能の実装よりも、画面構成とデザイン性を重視し、
-        アプリとしての完成度を一段階高めることを目的とした。
-      </p>
-
-      <h4>🔷 実施内容</h4>
-      <ul>
-        <li>・イベント詳細ページ用のHTMLファイルを新たに作成</li>
-        <li>・ホーム画面から遷移することを想定した画面構成を設計</li>
-        <li>・イベント画像を大きく配置し、視覚的に分かりやすいUIを意識</li>
-        <li>・カード型デザインを採用し、情報のまとまりを重視</li>
-      </ul>
-
-      <h4>🔷 イベント詳細ページの構成</h4>
-      <ul>
-        <li>・イベントのメイン画像</li>
-        <li>・イベント名</li>
-        <li>・学校名、日付、開催場所</li>
-        <li>・簡単なイベント説明文</li>
-        <li>・お気に入り（★）ボタン（現時点では見た目のみ）</li>
-      </ul>
-
-      <h4>🔷 作成した画面（スクリーンショット）</h4>
-      <p>
-        以下は、今回作成したイベント詳細ページのスクリーンショットである。
-        ホーム画面と同じデザイントーンを保ちつつ、
-        情報を整理して表示できるよう工夫した。
-      </p>
-
-      <!-- スクリーンショット挿入枠 -->
-      <img src="./topscreen3.png" alt="イベント詳細ページ スクリーンショット①" style="width:100%; max-width:800px; margin-bottom:20px;">
-      <img src="./eventpage1.png" alt="イベント詳細ページ スクリーンショット②" style="width:100%; max-width:800px;">
-
-      <h4>🔷 振り返り</h4>
-      <p>
-        ホーム画面だけでなく、詳細ページを作成したことで、
-        アプリ全体の構造がより明確になった。
-        特に、画像の比率や余白、情報の区切り方を調整することで、
-        見た目の印象が大きく変わることを実感した。
-        今後は、画面同士のつながりや操作性にも注目していきたい。
+        これまで作成してきたホーム画面・イベント画面を踏まえ、
+        情報収集の導線をより明確にするために「スクール（大学）一覧」のUIを設計する。
+        特に、留学初期の学生が<strong>どの学校で、どのようなイベントが行われているか</strong>を
+        直感的に把握できる構成を目指した。
       </p>
 
       <br>
-      <h4>🔷 次回予定</h4>
+
+      <h4>🔷 実施内容</h4>
+      <ul>
+        <li>・大学（スクール）一覧ページのUI設計</li>
+        <li>・大学名と写真を組み合わせたカード型レイアウトを採用</li>
+        <li>・今後のイベント探索につながる導線として位置付け</li>
+        <li>・クリック動作は未実装だが、構造と視認性を優先</li>
+      </ul>
+
+      <br>
+
+      <h4>🔷 UI設計のポイント</h4>
+      <ul>
+        <li>・学校名を視覚的に把握しやすい構成</li>
+        <li>・写真サイズ・比率を統一し、一覧性を重視</li>
+        <li>・ホーム画面、イベント画面とデザイントーンを統一</li>
+      </ul>
+
+      <br>
+
+      <h4>🔷 作成した画面（スクリーンショット）</h4>
+      <p>以下に、今回作成したスクール一覧UIの画面を表示した。（縮小の関係で見づらいかもです... ）</p>
+
+      <!-- 画像差し替え用 -->
+      <div style="margin: 16px 0;">
+        <img src="../doyolab/school ex.png" alt="スクール一覧UI 1" style="width:100%; max-width:420px;">
+      </div>
+     
+
+      <br>
+
+      <h4>🔷 振り返り</h4>
       <p>
-        次回は、ホーム画面とイベント詳細ページのつながりをさらに整理し、
-        他の画面（学校別表示や保存画面など）の構成について検討する。
-        必要に応じて、デザインの微調整も行う予定である。
+        スクール一覧を追加したことで、イベント情報を「学校単位」で整理する方向性が明確になった。
+        機能面は未実装であるが、UIとしては情報収集アプリの骨格がより具体的に見える段階に入ったと感じる。
       </p>
 
-      <p style="margin-top: 15px;">
+      <br>
+
+      <h4>🔷 次回予定</h4>
+      <p>
+        次回は、保存（★）機能やフィルター機能など、
+        ユーザーが情報を整理・見返すためのUI設計を検討する。
+      </p>
+
+      <br>
+
+      <p style="margin-top: 16px;">
         最近までのオーストラリア留学中の様子をInstagramに投稿しています。<br>
         ぜひ気軽に覗いてみてください！<br>
-        Instagram:
-        <a href="https://www.instagram.com/keen_vq37" target="_blank" style="color:#E1306C; font-weight:bold;">
+        Instagram：
+        <a href="https://www.instagram.com/keen_vq37" target="_blank" style="font-weight:bold;">
           @keen_vq37
         </a>
       </p>
@@ -97,34 +99,7 @@
 <!-- フッター -->
 <div id="footer">
   <div class="inner">
-    <section class="gridWrapper">
-      <article class="grid">
-        <p class="logo">
-          <a href="./index.html">
-            X-Business Program<br />
-            <span>XBP科目3期生（2023）</span>
-          </a>
-        </p>
-      </article>
-
-      <article class="grid col3" style="background-color:#8B5A2B; padding:10px 20px; border-radius:4px;">
-        <ul style="margin:0; padding:0; list-style:none;">
-          <li>Email: r202302166vd@jindai.jp</li>
-          <li>所属学部: 神奈川大学 国際経営学部 3年F組</li>
-          <li>
-            Instagram:
-            <a href="https://www.instagram.com/keen_vq37" target="_blank">＠keen_vq37</a>
-          </li>
-          <li>学籍番号: 202302166</li>
-        </ul>
-        <p style="margin-top:10px;">
-          XBP紹介ページ：
-          <a href="https://doyolab.net/xbp/intro/" target="_blank" rel="nofollow">
-            https://doyolab.net/xbp/intro/
-          </a>
-        </p>
-      </article>
-    </section>
+    <p>&copy; Doyolab / X-Business Program</p>
   </div>
 </div>
 
