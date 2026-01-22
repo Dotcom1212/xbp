@@ -26,31 +26,57 @@
     <h3 class="heading">演習ノート</h3>
 
     <article class="report">
-      <h2>第6回レポート：トップページ・タイムライン試作</h2><br>
-      <h4>🔷 今回の目的</h4>
-      <p>第5回で整理した機能優先度をもとに、Figmaを使ってトップページとタイムラインページの初期デザインを試作した。実際のアプリ画面に近い構造を作り、ユーザー体験をイメージすることが目的。</p>
+      <h2>第12回レポート：ホーム画面UIの整理と改善点の洗い出し</h2><br>
 
-      <h4>🔷 実施内容</h4>
+      <h4>🔷 今回の目的</h4>
+      <p>
+        第11回で作成したホーム画面を振り返り、現時点で実現できている点と、
+        今後改善・拡張できそうな点を整理することを目的とした。
+        実装を急ぐのではなく、UI・構成面からアプリ全体の方向性を明確にする回とする。
+      </p>
+
+      <h4>🔷 ホーム画面について</h4>
       <ul>
-        <li>・トップページに検索バー、フォロー中の学校と個人アカウント大学情報のポップを配置</li>
-        <li>・タイムラインページで個人の投稿（情報源）組織、学校の投稿を表示</li>
-        <li>・使いやすさを目的に、インスタグラムとXの使用感に近いUIとフォーマットを使用</li>
-        <li>・AI翻訳の具体的な挿入個所を今後作成しながら判断してい</li>
-        </li>
+        <li>・留学生向けのイベント情報を一覧で確認できる構成</li>
+        <li>・画像を大きく使い、直感的にイベントの雰囲気が伝わるUI</li>
+        <li>・星マーク（お気に入り）や下部ナビゲーションを配置</li>
+        <li>・Instagramのタイムラインを意識した縦スクロール型レイアウト</li>
       </ul>
 
-      <h4>🔷 試作した画面例</h4>
-      <p>以下はFigmaで作成したトップページとタイムラインページのスクリーンショット：</p>
-      <img src="./figma sample1.png" alt="トップページ案" style="width:100%; max-width:300px;">
-      <img src="./figma samle2.png" alt="タイムライン案" style="width:100%; max-width:300px;">
-
-      <h4>🔷 次回予定：プロフィール画面の試作</h4>
-      <p>次回は、プロフィール画面や検索欄など足りていないページと、全体の画面を整理する予定。</p>
-
-      <p style="margin-top: 10px;">
-        🔷また、オーストラリア留学中の様子を不定期にInstagramに投稿しています。ぜひ気軽に覗いてみてください！<br>
-        Instagram: <a href="https://www.instagram.com/keen_vq37" target="_blank" style="color: #E1306C; font-weight: bold;">@keen_vq37</a>
+      <h4>🔷 ホーム画面（現時点）スクリーンショット</h4>
+      <p>
+        以下は、第11回までに作成したホーム画面のスクリーンショットである。
+        （※後ほど実際の画像に差し替え予定）ある程度基盤となる姿はできたが、使いたいと思えるビジュアルではない。使いやすさと視覚的の良さを両立させていきたい。
       </p>
+
+      <!-- スクリーンショット挿入枠 -->
+      <img src="./topscreen1.png" alt="ホーム画面UIスクリーンショット①" style="width:100%; max-width:800px; margin-bottom:20px;">
+    
+
+      <h4>🔷 今後修正・改善できると考えられる点</h4>
+      <ul>
+        <li>・星マーク（お気に入り）を実際に保存機能として動作させる</li>
+        <li>・イベントをクリックした際の「詳細ページ」の追加</li>
+        <li>・学校ごと・日付ごとのイベント整理</li>
+        <li>・情報量を増やしつつも、留学初期の学生が迷わない表示設計</li>
+      </ul>
+
+      <h4>🔷 次回予定：イベント詳細画面の設計</h4>
+      <p>
+        次回は、ホーム画面から遷移することを想定した
+        「イベント詳細画面」の構成を検討し、HTMLとして作成していく。
+        学校名・日付・場所といった基本情報を中心に設計する予定である。
+      </p>
+
+      <p style="margin-top: 15px;">
+        🔷 最近までのオーストラリア留学中の様子をInstagramに投稿しています。<br>
+        ぜひ気軽に覗いてみてください！<br>
+        Instagram: 
+        <a href="https://www.instagram.com/keen_vq37" target="_blank" style="color:#E1306C; font-weight:bold;">
+          @keen_vq37
+        </a>
+      </p>
+
     </article>
   </section>
 </div>
@@ -60,17 +86,32 @@
   <div class="inner">
     <section class="gridWrapper">
       <article class="grid">
-        <p class="logo"><a href="./index.html">X-Business Program<br /><span>XBP科目3期生（2023）</span></a></p>
+        <p class="logo">
+          <a href="./index.html">
+            X-Business Program<br />
+            <span>XBP科目3期生（2023）</span>
+          </a>
+        </p>
       </article>
 
-      <article class="grid col3" style="background-color: #8B5A2B; padding: 10px 20px; border-radius: 4px;">
-        <ul style="margin: 0; padding: 0; list-style: none;">
+      <article class="grid col3" style="background-color:#8B5A2B; padding:10px 20px; border-radius:4px;">
+        <ul style="margin:0; padding:0; list-style:none;">
           <li>Email: r202302166vd@jindai.jp</li>
           <li>所属学部: 神奈川大学 国際経営学部 3年F組</li>
-          <li>Instagram: <a href="https://www.instagram.com/keen_vq37" target="_blank">＠keen_vq37</a></li>
+          <li>
+            Instagram: 
+            <a href="https://www.instagram.com/keen_vq37" target="_blank" style="color:#FFD1DC;">
+              ＠keen_vq37
+            </a>
+          </li>
           <li>学籍番号: 202302166</li>
         </ul>
-        <p style="margin-top: 10px;">XBP紹介ページ：<a href="https://doyolab.net/xbp/intro/" target="_blank" rel="nofollow">https://doyolab.net/xbp/intro/</a></p>
+        <p style="margin-top:10px;">
+          XBP紹介ページ：
+          <a href="https://doyolab.net/xbp/intro/" target="_blank" rel="nofollow">
+            https://doyolab.net/xbp/intro/
+          </a>
+        </p>
       </article>
     </section>
   </div>

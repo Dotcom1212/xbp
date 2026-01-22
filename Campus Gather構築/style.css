@@ -1,0 +1,106 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  padding-bottom: 80px;
+}
+
+/* Header */
+.header {
+  padding: 18px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* School Feed */
+.school-feed {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* School Block */
+.school-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.school-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.school-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.school-header span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Event Card */
+.event-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.event-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.event-text {
+  padding: 14px 16px;
+}
+
+.event-text h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.event-text p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 0;
+  font-size: 14px;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #444;
+}
+
+.bottom-nav .active {
+  font-weight: 600;
+}
