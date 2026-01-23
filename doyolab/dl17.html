@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="神奈川大学 X-Business Program | Doyolab 第15回ノート">
-  <meta name="keywords" content="XBP, Doyolab, UI, プロトタイプ">
-  <title>Doyolab project | 第15回</title>
+  <meta name="description" content="X-Business Program 第17回レポート">
+  <title>Doyolab Project | 第17回</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
 <!-- ヘッダー -->
@@ -26,54 +26,66 @@
     <h3 class="heading">演習ノート</h3>
 
     <article class="report">
-      <h2>第15回レポート：ホーム画面改善とページ遷移の実装</h2><br>
+      <h2>第17回レポート：UI完成度の向上とデモ体験の設計</h2>
+      <br>
 
       <h4>🔷 今回の目的</h4>
       <p>
-        これまで設計してきたUIを「見るだけの画面」から一歩進め、
-        実際に操作できるプロトタイプとして成立させることを目的とした。
-        特に、ホーム画面を起点にイベントページ・学校ページへ遷移できる構造を実装する。
+        これまでに構築してきた Campus Gather を、
+        「実際に使えるアプリに近い体験」として見せられるレベルまで引き上げることを目的とした。
+        操作可能なデモを提示することで、完成形を具体的に伝える。
       </p>
 
       <h4>🔷 実施内容</h4>
       <ul>
-    
-        <li>・イベントカードをクリックするとイベント詳細ページへ遷移するよう実装</li>
-        <li>・下部ナビゲーションから Home / Schools ページへ移動可能に</li>
-        <li>・リンク間による最低限の操作デモを実現</li>
+        <li>・ホーム画面をタイムライン形式に整理</li>
+        <li>・ストーリーUIを追加し、イベント導線として活用</li>
+        <li>・Home / Event / Schools / Saved の画面遷移を整理</li>
+        <li>・保存（★）ボタンなど、デモ可能な操作を実装</li>
+        <li>・配色・余白・カードUIを調整し、アプリらしさを向上</li>
       </ul>
 
-      <h4>🔷 UI試作画面（スクリーンショット）</h4>
+      <h4>🔷 デモサイト（実際に操作可能）</h4>
       <p>
-        以下は今回作成したプロトタイプ画面の一部である。
-        今のところ視認性と操作の直感性を重視した。最後の修正でデザイン面を修正する予定
+        以下は、今回作成した Campus Gather のデモ画面である。
+        実際に画面を操作し、UIや画面遷移を確認できる。
       </p>
 
-      <!-- スクショ枠 -->
-      <div style="margin: 20px 0;">
-        <img src="screenshot_home.png" alt="Home UI Screenshot"
-             style="width:100%; max-width:420px; margin-bottom:16px;">
-        
+      <!-- ===== Campus Gather 埋め込み ===== -->
+      <div style="
+        width:100%;
+        max-width:420px;
+        margin:24px auto;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 8px 24px rgba(0,0,0,0.12);
+      ">
+        <iframe
+          src="../Campus Gather構築/Campus Gather.html"
+          width="100%"
+          height="740"
+          style="border:none;"
+          title="Campus Gather Demo">
+        </iframe>
       </div>
+      <!-- ================================ -->
 
-      <h4>🔷 今回の成果</h4>
+      <h4>🔷 工夫したポイント</h4>
+      <ul>
+        <li>・Instagramに近いUIを参考にし、直感的な操作性を意識</li>
+        <li>・デモとして「触れる」ことを重視した設計</li>
+        <li>・説明なしでも理解できる画面構成を目指した</li>
+      </ul>
+
+      <h4>🔷 次回予定（第18回）</h4>
       <p>
-        単なるデザイン案ではなく、「実際に触って確認できる」プロトタイプとして、
-        アプリ全体の構造を示すことができた。
-        今後の改善点や追加機能についても、具体的な議論がしやすい状態になったと感じる。
+        プロジェクト全体の振り返りを行い、
+        企画から実装までの学びと今後の展望を整理する。
       </p>
 
-      <h4>🔷 次回予定</h4>
-      <p>
-        次回は、保存（★）機能やページ構成の拡張など、
-        さらに実用的な操作を想定したデモに近づけていく予定である。
-        使ってもらえるための内容、見た目に近づけていきたい
-      </p>
-
-      <p style="margin-top: 20px;">
-        🔷 最近までのオーストラリア留学中の様子をInstagramに投稿しています。<br>
+      <p style="margin-top:16px;">
+        最近までのオーストラリア留学中の様子をInstagramに投稿しています。<br>
         ぜひ気軽に覗いてみてください！<br>
-        Instagram:
         <a href="https://www.instagram.com/keen_vq37" target="_blank"
            style="color:#E1306C; font-weight:bold;">
           @keen_vq37
@@ -87,11 +99,15 @@
 <!-- フッター -->
 <div id="footer">
   <div class="inner">
-    <p class="logo">
-      <a href="./index.html">X-Business Program<br>
-        <span>XBP科目3期生（2023）</span>
-      </a>
-    </p>
+    <section class="gridWrapper">
+      <article class="grid">
+        <p class="logo">
+          <a href="./index.html">X-Business Program<br>
+            <span>XBP科目3期生（2023）</span>
+          </a>
+        </p>
+      </article>
+    </section>
   </div>
 </div>
 
