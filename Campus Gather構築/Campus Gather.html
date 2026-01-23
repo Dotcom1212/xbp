@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Campus</title>
+  <title>Campus | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,6 +11,15 @@
 
 <div class="container">
 
+  <!-- Story UI -->
+  <div class="story-bar">
+    <a href="#"><div class="story"><img src="../doyolab/uni ex.jfif"></div></a>
+    <a href="#"><div class="story"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=200&q=80"></div></a>
+    <a href="#"><div class="story"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=200&q=80"></div></a>
+    <a href="#"><div class="story"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&q=80"></div></a>
+  </div>
+
+  <!-- Event Cards -->
   <div class="card">
     <div class="card-image">
       <img src="../doyolab/top ex.jpg">
@@ -18,7 +27,7 @@
     <div class="card-body">
       <div class="card-title">International Welcome Event</div>
       <div class="card-meta">University of Melbourne · Aug</div>
-      <div class="card-action">★ Save</div>
+      <button class="save-btn" onclick="toggleSave(this)">☆ Save</button>
     </div>
   </div>
 
@@ -29,19 +38,36 @@
     <div class="card-body">
       <div class="card-title">Student Club Orientation</div>
       <div class="card-meta">University of Toronto · Sep</div>
-      <div class="card-action">★ Save</div>
+      <button class="save-btn" onclick="toggleSave(this)">☆ Save</button>
     </div>
   </div>
 
-  <a class="btn" href="event.html">View Event Detail</a>
+  <div class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1515165562835-c4c6e3db2d22?auto=format&fit=crop&w=900&q=80">
+    </div>
+    <div class="card-body">
+      <div class="card-title">Campus Tour Day</div>
+      <div class="card-meta">Kanagawa University · Oct</div>
+      <button class="save-btn" onclick="toggleSave(this)">☆ Save</button>
+    </div>
+  </div>
 
+  <a class="btn" href="event.html">View Events</a>
 </div>
 
 <nav>
-  <span>Home</span>
-  <span>Schools</span>
-  <span>Saved ★</span>
+  <a href="Campus Gather.html">Home</a>
+  <a href="school.html">Schools</a>
+  <a href="save.html">Saved ★</a>
 </nav>
+
+<script>
+function toggleSave(btn){
+  btn.classList.toggle("saved");
+  btn.textContent = btn.classList.contains("saved") ? "★ Saved" : "☆ Save";
+}
+</script>
 
 </body>
 </html>

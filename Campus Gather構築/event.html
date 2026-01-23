@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Event | Campus</title>
+  <title>Campus | Events</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>Event</header>
+<header>Events</header>
 
 <div class="container">
 
@@ -18,17 +18,24 @@
     <div class="card-body">
       <div class="card-title">International Student Meetup</div>
       <div class="card-meta">University Event · August</div>
-      <div class="card-action">★ Save</div>
+      <button class="save-btn" onclick="toggleSave(this)">☆ Save</button>
     </div>
   </div>
 
 </div>
 
 <nav>
-  <span>Home</span>
-  <span>Schools</span>
-  <span>Saved ★</span>
+  <a href="Campus Gather.html">Home</a>
+  <a href="school.html">Schools</a>
+  <a href="save.html">Saved ★</a>
 </nav>
+
+<script>
+function toggleSave(btn){
+  btn.classList.toggle("saved");
+  btn.textContent = btn.classList.contains("saved") ? "★ Saved" : "☆ Save";
+}
+</script>
 
 </body>
 </html>
