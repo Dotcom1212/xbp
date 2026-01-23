@@ -6,43 +6,47 @@
 }
 
 body {
-  background: #f5f5f5;
+  background: #f4f6f8;
   color: #111;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
   position: sticky;
   top: 0;
-  background: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 14px;
+  background: #ffffff;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 100;
 }
 
-/* Layout */
+/* ===== Layout ===== */
 .container {
   max-width: 420px;
   margin: 0 auto;
-  padding-bottom: 90px;
+  padding-bottom: 110px;
 }
 
-/* Story UI */
+/* ===== Story ===== */
 .story-bar {
   display: flex;
-  gap: 12px;
-  padding: 12px 16px;
+  gap: 14px;
+  padding: 14px 16px;
   overflow-x: auto;
 }
 
 .story {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
   border: 3px solid #2ecc71;
   overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .story img {
@@ -51,13 +55,24 @@ header {
   object-fit: cover;
 }
 
-/* Card */
+.story.active {
+  animation: pulse 0.4s ease-in-out;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(46,204,113,0); }
+  50% { box-shadow: 0 0 14px rgba(46,204,113,0.9); }
+  100% { box-shadow: 0 0 0 rgba(46,204,113,0); }
+}
+
+/* ===== Card ===== */
 .card {
-  background: #fff;
-  margin: 16px 12px;
-  border-radius: 18px;
+  background: #ffffff;
+  margin: 18px 14px;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
 .card-image {
@@ -71,63 +86,75 @@ header {
 }
 
 .card-body {
-  padding: 14px 16px;
+  padding: 16px 18px;
 }
 
 .card-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .card-meta {
   font-size: 13px;
   color: #666;
-  margin-top: 4px;
 }
 
-/* Save Button */
+/* ===== Save Button ===== */
 .save-btn {
-  margin-top: 10px;
-  padding: 6px 12px;
+  margin-top: 12px;
+  padding: 8px 16px;
   border-radius: 20px;
   border: none;
-  background: #eee;
+  background: #f0f0f0;
   font-size: 13px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #e0e0e0;
 }
 
 .save-btn.saved {
-  background: #000;
+  background: #111;
   color: #fff;
 }
 
-/* Button */
+/* ===== Primary Button ===== */
 .btn {
   display: block;
-  margin: 20px 16px;
-  padding: 14px;
-  border-radius: 30px;
-  background: #000;
+  margin: 24px 18px;
+  padding: 16px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #111, #333);
   color: #fff;
   text-align: center;
   text-decoration: none;
+  font-weight: 600;
 }
 
-/* Bottom Nav */
+/* ===== Bottom Nav ===== */
 nav {
   position: fixed;
   bottom: 0;
   width: 100%;
   max-width: 420px;
-  background: #fff;
-  border-top: 1px solid #e0e0e0;
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 nav a {
-  font-size: 12px;
-  color: #555;
   text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #111;
 }

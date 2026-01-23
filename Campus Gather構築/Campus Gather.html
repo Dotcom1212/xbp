@@ -7,19 +7,24 @@
 </head>
 <body>
 
-<header>Campus</header>
+<header>Campus Gather</header>
 
 <div class="container">
 
-  <!-- Story UI -->
+  <!-- Story -->
   <div class="story-bar">
-    <a href="#"><div class="story"><img src="../doyolab/uni ex.jfif"></div></a>
-    <a href="#"><div class="story"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=200&q=80"></div></a>
-    <a href="#"><div class="story"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=200&q=80"></div></a>
-    <a href="#"><div class="story"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&q=80"></div></a>
+    <div class="story" onclick="openStory(this)">
+      <img src="../doyolab/uni ex.jfif">
+    </div>
+    <div class="story" onclick="openStory(this)">
+      <img src="../doyolab/utas logo.png">
+    </div>
+    <div class="story" onclick="openStory(this)">
+      <img src="../doyolab/shindai logo pic.jfif">
+    </div>
   </div>
 
-  <!-- Event Cards -->
+  <!-- Timeline -->
   <div class="card">
     <div class="card-image">
       <img src="../doyolab/top ex.jpg">
@@ -33,18 +38,7 @@
 
   <div class="card">
     <div class="card-image">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80">
-    </div>
-    <div class="card-body">
-      <div class="card-title">Student Club Orientation</div>
-      <div class="card-meta">University of Toronto · Sep</div>
-      <button class="save-btn" onclick="toggleSave(this)">☆ Save</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-image">
-      <img src="https://images.unsplash.com/photo-1515165562835-c4c6e3db2d22?auto=format&fit=crop&w=900&q=80">
+      <img src="../doyolab/campus tour pic.jfif">
     </div>
     <div class="card-body">
       <div class="card-title">Campus Tour Day</div>
@@ -53,7 +47,8 @@
     </div>
   </div>
 
-  <a class="btn" href="event.html">View Events</a>
+  <a class="btn" href="event.html">Explore Events</a>
+
 </div>
 
 <nav>
@@ -66,6 +61,13 @@
 function toggleSave(btn){
   btn.classList.toggle("saved");
   btn.textContent = btn.classList.contains("saved") ? "★ Saved" : "☆ Save";
+}
+
+function openStory(story){
+  story.classList.add("active");
+  setTimeout(() => {
+    window.location.href = "event.html";
+  }, 300);
 }
 </script>
 
